@@ -1,0 +1,47 @@
+// Place your settings in this file to overwrite the default settings
+{
+  // Controls the font size in pixels.
+  "editor.fontSize": 14,
+
+  // Controls the font size in pixels of the terminal.
+  "terminal.integrated.fontSize": 14,
+
+  // Controls auto save of dirty files. Accepted values:  'off', 'afterDelay', 'onFocusChange' (editor loses focus), 'onWindowChange' (window loses focus). If set to 'afterDelay', you can configure the delay in 'files.autoSaveDelay'.
+  "files.autoSave": "afterDelay",
+
+  "editor.formatOnSave": true,
+
+  // Use 'prettier-eslint' instead of 'prettier'. Other settings will only be fallbacks in case they could not be inferred from eslint rules.
+  "prettier.eslintIntegration": true,
+
+  // The number of spaces a tab is equal to. This setting is overriden based on the file contents when `editor.detectIndentation` is on.
+  "editor.tabSize": 2,
+
+  // If true, will use single instead of double quotes
+  "prettier.singleQuote": true,
+
+  // Whether to add a semicolon at the end of every line
+  "prettier.semi": false,
+
+  // Controls the printing of trailing commas wherever possible
+  "prettier.trailingComma": "es5",
+
+  "files.associations": {
+    "*.snap": "javascript"
+  },
+  "window.zoomLevel": 0,
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.historyExplorer.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": true,
+
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "as3mxml.sdk.searchPaths": [
+    "/Users/mad/projects/tools/AIRSDK_Compiler_27"
+  ],
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true
+}
