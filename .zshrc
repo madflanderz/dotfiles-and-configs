@@ -2,7 +2,8 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/mad/.oh-my-zsh"
+#export ZSH="/Users/maaanders/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -27,7 +28,7 @@ source $ZSH/oh-my-zsh.sh
 #export PATH="${PATH}:/usr/local/mysql/bin"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$PATH:$HOME/.n/bin"
 
 # CDPATH ALTERATIONS
 CDPATH=.:$HOME:$HOME/projects:$HOME/Desktop

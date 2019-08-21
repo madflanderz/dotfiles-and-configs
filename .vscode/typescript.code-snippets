@@ -1,0 +1,189 @@
+{
+  // Place your snippets for typescriptreact here. Each snippet is defined under a snippet name and has a prefix, body and
+  // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+  // same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+
+  "describe": {
+    "prefix": "desc",
+    "body": [
+      "import * as React from 'react'",
+      "import { render } from '../../test-utils/index'",
+      "",
+      "describe('${TM_FILENAME_BASE/(.test)//}', () => {",
+      "  it('renders without crash', () => {",
+      "    render(<${TM_FILENAME_BASE/(.test)//} />)",
+      "  })",
+      "})"
+    ]
+  },
+
+  "MaterialUI Component": {
+    "prefix": "comp",
+    "body": [
+      "import React from \"react\"",
+      "",
+      "type Props = {",
+      "  ${1:PROP_NAME}: ${2:PROP_NAME}",
+      "}",
+      "",
+      "const $TM_FILENAME_BASE: React.FC<Props> = ({ ${1:PROP_NAME} }) => {",
+      "  return (",
+      "    <div>",
+      "      {${1:PROP_NAME}}",
+      "      ${0}",
+      "    </div>",
+      "  )",
+      "}",
+      "",
+      "export default $TM_FILENAME_BASE",
+      ""
+    ],
+    "description": "MaterialUI Component"
+  },
+
+  "MaterialUI Component with Styles": {
+    "prefix": "comps",
+    "body": [
+      "import React from \"react\"",
+      "import { makeStyles, createStyles } from \"@material-ui/core\"",
+      "",
+      "const useStyles = makeStyles(",
+      "  createStyles({",
+      "    root: {",
+      "      // position: \"relative\",",
+      "    },",
+      "  }),",
+      "  { name: \"$TM_FILENAME_BASE\" }",
+      ")",
+      "",
+      "type Props = {",
+      "  ${1:PROP_NAME}: ${2:string}",
+      "}",
+      "",
+      "export const $TM_FILENAME_BASE: React.FC<Props> = ({ ${1:PROP_NAME} }) => {",
+      "  const classes = useStyles({})",
+      "  return (",
+      "    <div className={classes.root}>",
+      "      {${1:PROP_NAME}}",
+      "      ${0}",
+      "    </div>",
+      "  )",
+      "}",
+      "",
+      "export default $TM_FILENAME_BASE",
+      ""
+    ],
+    "description": "MaterialUI Component with Styles"
+  },
+
+  "MaterialUI Component with Styles and Theme": {
+    "prefix": "compst",
+    "body": [
+      "import React from \"react\"",
+      "import { makeStyles, createStyles, Theme } from \"@material-ui/core\"",
+      "",
+      "const useStyles = makeStyles(",
+      "  (theme: Theme) =>",
+      "    createStyles({",
+      "      root: {",
+      "        // padding: theme.spacing(2),",
+      "        // border: `1px solid ${theme.palette.primary.dark}`,",
+      "      },",
+      "    }),",
+      "  { name: \"$TM_FILENAME_BASE\" }",
+      ")",
+      "",
+      "type Props = {",
+      "  ${1:PROP_NAME}: ${2:string}",
+      "}",
+      "",
+      "export const $TM_FILENAME_BASE: React.FC<Props> = ({ ${1:PROP_NAME} }) => {",
+      "  const classes = useStyles({})",
+      "  return (",
+      "    <div className={classes.root}>",
+      "      {${1:PROP_NAME}}",
+      "      ${0}",
+      "    </div>",
+      "  )",
+      "}",
+      "",
+      "export default $TM_FILENAME_BASE",
+      ""
+    ],
+    "description": "MaterialUI Component with Styles and Theme"
+  },
+
+  "MaterialUI useStyles with Theme": {
+    "prefix": "useStylest",
+    "body": [
+      "import { makeStyles, createStyles, Theme } from \"@material-ui/core\"",
+      "",
+      "const useStyles = makeStyles(",
+      "  (theme: Theme) =>",
+      "    createStyles({",
+      "      root: {",
+      "        // padding: theme.spacing(2),",
+      "        // border: `1px solid ${theme.palette.primary.dark}`,",
+      "        $0",
+      "      },",
+      "    }),",
+      "  { name: \"$TM_FILENAME_BASE\" }",
+      ")",
+      ""
+    ],
+    "description": "MaterialUI useStyles with Theme"
+  },
+
+  "MaterialUI useStyles": {
+    "prefix": "useStyles",
+    "body": [
+      "import { makeStyles, createStyles } from \"@material-ui/core\"",
+      "",
+      "const useStyles = makeStyles(",
+      "  createStyles({",
+      "    root: {",
+      "      $0",
+      "    },",
+      "  }),",
+      "  { name: \"$TM_FILENAME_BASE\" }",
+      ")",
+      ""
+    ],
+    "description": "MaterialUI useStyles"
+  },
+
+  "Display an ellipsis to represent clipped text": {
+    "prefix": "ellipsis",
+    "body": [
+      "textOverflow: 'ellipsis',",
+      "overflow: 'hidden',",
+      "whiteSpace: 'nowrap'"
+    ],
+    "description": "Display an ellipsis to represent clipped text"
+  },
+
+  "consoleLog": {
+    "prefix": "cl",
+    "body": "console.log(${1:message}) "
+  },
+
+  "exportDefault": {
+    "prefix": "exp",
+    "body": "export default "
+  },
+
+  "exportConst": {
+    "prefix": "ec",
+    "body": "export const "
+  }
+}
